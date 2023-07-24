@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper and scissors</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://kit.fontawesome.com/52337a6bb0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="titleGame">
+        <h1>ROCK PAPER SCISSOR</h1>
+    </div>
+    <div class="scoreboard">
+        <h2 class="score-info" id="scoreInfo">Choose your weapon</h2>
+        <h3 class="score-message" id="scoreMessage">First to score 5 points wins the game</h3>
+    </div>
+    <div class="scores-conteiner">
+        <div class="score-box">
+            <div class="sign" id="playerSign">❔</div>
+            <p class="score" id="playerScore">player: 0</p>
+        </div>
+        <div class="score-box">
+            <div class="sign" id="computerSign">❔</i></div>
+            <p class="score" id="computerScore">computer: 0</p>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="btn btn-square" id="rockBtn">
+          <div class="sign"><i class="fa-solid fa-hand-back-fist fa-rotate-90"></i></div>
+        </button>
+        <button class="btn btn-square" id="paperBtn">
+          <div class="sign"><i class="fa-solid fa-toilet-paper"></i></div>
+        </button>
+        <button class="btn btn-square" id="scissorsBtn">
+          <div class="sign"><i class="fa-sharp fa-solid fa-scissors"></i></div>
+        </button>
+      </div>
+      <div class="playAgain">
+        <input type="button" value="play again" id="playAgain">
+      </div>
+      <script src="index.js"></script>
+</body>
+</html>

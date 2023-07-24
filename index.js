@@ -3,7 +3,11 @@ let computerScore = 0
 let roundWinner = ''
 
 function playRound(playerSelection, computerSelection){
-    if(playerSelection === computerSelection){roundWinner = 'tie'}
+    if(playerSelection === computerSelection){
+      roundWinner = 'tie';
+      updateScoreMessage(roundWinner, playerSelection, computerSelection);
+      return;
+    }
 
 if((playerSelection === 'ROCK' && computerSelection === 'SCISSORS') ||
     (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
@@ -112,16 +116,13 @@ function updateChoices(playerSelection, computerSelection) {
       )} beats ${computerSelection.toLowerCase()}`
       return
     }
-    if (winner === 'computer') {
-      scoreMessage.textContent = `${capitalizeFirstLetter(
-        playerSelection
-      )} is beaten by ${computerSelection.toLowerCase()}`
+    else if (winner === 'computer') {
+      scoreMessage.textContent = `${capitalizeFirstLetter(playerSelection)} is beaten by ${computerSelection.toLowerCase()}`
       return
     }
-  
-    scoreMessage.textContent = `${capitalizeFirstLetter(
-      playerSelection
-    )} ties with ${computerSelection.toLowerCase()}`
+    else{
+    scoreMessage.textContent = `${capitalizeFirstLetter(playerSelection)} ties with ${computerSelection.toLowerCase()}`
+    }
   }
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
